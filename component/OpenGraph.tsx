@@ -10,11 +10,13 @@ const OpenGraph = () => {
   const openGraphData = useMemo(() => {
     const url = asPath.split('?')[0];
 
+    console.log(_.has(OPEN_GRAPH, url))
+
     if (_.has(OPEN_GRAPH, url)) {
-      return OPEN_GRAPH[url];
+      return {...OPEN_GRAPH[url], url};
     }
 
-    return OPEN_GRAPH.DEFAULT;
+    return {...OPEN_GRAPH.DEFAULT, url};
   }, [asPath]);
 
   return (
@@ -23,7 +25,7 @@ const OpenGraph = () => {
       <meta property="og:title" content={openGraphData.title} />
       <meta property="og:description" content={openGraphData.description} />
       <meta property="og:image" content={openGraphData.image} />
-      <meta property="og:url" content="https://www.pindirectshop.com/" />
+      <meta property="og:url" content={`https://www.pindirectshop.com/${openGraphData.url}`} />
       <meta property="og:site_name" content="Pindirect" />
       <meta property="og:type" content="website" />
       <meta property="og:image:width" content="800" />
@@ -34,7 +36,7 @@ const OpenGraph = () => {
       <meta name="twitter:description" content={openGraphData.description} />
       <meta name="twitter:image" content={openGraphData.image} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://www.pindirectshop.com/" />
+      <meta property="twitter:url" content={`https://www.pindirectshop.com/${openGraphData.url}`} />
       <meta property="twitter:domain" content="pindirectshop.com" />
     </Head>
   );
