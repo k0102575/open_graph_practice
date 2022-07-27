@@ -2,7 +2,7 @@ export interface OPEN_GRAPH_PROPS {
   title: string;
   description: string;
   image: string;
-  urlParams?: string;
+  url?: string;
 }
 
 type openGraphTpye = {
