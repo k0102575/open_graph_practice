@@ -25,9 +25,7 @@ const OpenGraph = () => {
       <meta property="og:image" content={openGraphData.image} />
       <meta
         property="og:url"
-        content={`https://open-graph-practice.vercel.app${
-          openGraphData.urlParams || ''
-        }`}
+        content={`https://open-graph-practice.vercel.app`}
       />
       <meta property="og:site_name" content="Pindirect" />
       <meta property="og:type" content="website" />
@@ -41,7 +39,7 @@ const OpenGraph = () => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         property="twitter:url"
-        content={`https://www.open-graph-practice.vercel.app`}
+        content={`https://open-graph-practice.vercel.app`}
       />
       <meta property="twitter:domain" content="pindirectshop.com" />
     </Head>

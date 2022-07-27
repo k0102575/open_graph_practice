@@ -23,7 +23,6 @@ export const OPEN_GRAPH: openGraphTpye = {
     title: '핀다이렉트 (pindirect)',
     description: 'Z Mini 요금제를 만나보세요',
     image: 'https://shop-cdn.stagefive.io/z-web/ad/z-mini/z_mini_220714_og.png',
-    urlParams: '?utm_campaign=organic&utm_source=pindirect&utm_medium=content_share&utm_content=feeds_1019'
   },
   DEFAULT: {
     title: '핀다이렉트 (pindirect)',
