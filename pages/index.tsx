@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <meta property="og:title" content="핀다이렉트 (pindirect)" />
         <meta
           property="og:image"
-          content="https://shop-cdn.stagefive.io/z-web/ad/z/z_220714_og.png"
+          content={`${process.env.NEXT_PUBLIC_CDN}/ad/z/z_220714_og.png`}
         />
         <meta property="og:site_name" content="핀다이렉트 (pindirect)" />
         <meta property="og:description" content="핀다이렉트Z 요금제를 만나보세요" />
